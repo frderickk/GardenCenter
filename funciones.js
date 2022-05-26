@@ -1,5 +1,18 @@
+var url = "https://weatherservices.herokuapp.com/api";
+var urlClimaSanMiguel = "/weather/";
+
 function main(){
+
+    getFromUrl();
+
     recargar();
+}
+
+function getFromUrl(){
+    $.ajax({
+        url: url + urlClimaSanMiguel ,
+        type: "GET",
+    })
 }
 
 function recargar() {
@@ -7,15 +20,4 @@ function recargar() {
     refresh.addEventListener('click', _ => {
         location.reload();
     })
-}
-
-function ConfirmarCopiaEncuesta() {
-    var respuesta = confirm('Esta seguro que desea copiar la encuesta?');
-    if(respuesta){
-      return true;
-    }else{
-    window.location.replace("index.html");
-    return false;
-    }
-
 }
