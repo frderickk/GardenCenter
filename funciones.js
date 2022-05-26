@@ -1,14 +1,12 @@
-
-function alerta()
-{
-var mensaje;
-var opcion = confirm("Clicka en Aceptar o Cancelar");
-if (opcion == true) {
-    mensaje = "Has clickado OK";
-} else {
-    mensaje = "Has clickado Cancelar";
+function main(){
+    recargar();
 }
-//document.getElementById("ejemplo").innerHTML = mensaje;
+
+function recargar() {
+    let refresh = document.getElementById('ingresar_planta')
+    refresh.addEventListener('click', _ => {
+        location.reload();
+    })
 }
 
 function ConfirmarCopiaEncuesta() {

@@ -5,10 +5,10 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Ingreso de plantas</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    <script src='funciones.js'></script>
 </head>
-<body>
+<body onload="main()">
     <header >
         <div >
             <div>
@@ -38,22 +38,26 @@
         <br>
         <label for="campo_fila">Fila</label>
         <br>
-        <input type="text" name="Fila" id="campo_fila"></input>
+        <input type="number" name="Fila" id="campo_fila"></input>
         <br>
         <label for="campo_columna">Columna</label>
         <br>
-        <input type="text" name="Columna" id="campo_columna"></input>
+        <input type="number" name="Columna" id="campo_columna"></input>
         <br>
         <label for="campo_columna">Edad</label>
         <br>
-        <input type="text" name="Edad" id="campo_Edad"></input>
+        <input type="number" name="Edad" id="campo_Edad"></input>
         <br>
         <label for="campo_columna">Imagen</label>
         <br>
         <input type="text" name="Edad" id="campo_Edad"></input>
         <br>
 
-        <button onclick="alert('Se ingreso correctamente su planta');">
+        <form name="subida-imagenes" type="POST" enctype="multipart/formdata" >
+            <input type="file" name="imagen1" />
+        </form>
+
+        <button id="ingresar_planta" onclick="alert('Se ingreso correctamente su planta');">
         Ingresar planta
         </button>
         
