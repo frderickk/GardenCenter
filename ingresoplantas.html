@@ -12,7 +12,6 @@
     <header >
         <div >
             <div>
-
                 <nav id="navegacion" class="navegacion">
                     <a href="index.html">Home</a>
                     <a href="infoclima.html">Clima</a>
@@ -20,14 +19,13 @@
                     <a href="ingresoplantas.html">Ingresar plantas</a>
                 </nav>
             </div>
-            <h1>Introduzca los datos de la planta</h1>
+            <h1 id="h1Titulo">Introduzca los datos de la planta</h1>
         </div> 
     </header>
-
     <hr>
     <br>
-    <h3>Datos de planta</h3>
-    <form action="#">
+    <h3 id="h3Datos">Datos de planta</h3>
+    <form id="formBox" action="#">
         <label for="campo_nombre">Nombre</label>
         <br>
         <input type="text" name="nombre" id="campo_nombre">      
@@ -48,26 +46,23 @@
         <br>
         <input type="number" name="Edad" id="campo_Edad"></input>
         <br>
-        <label for="campo_columna">Imagen</label>
-        <br>
-        <input type="text" name="Edad" id="campo_Edad"></input>
-        <br>
          <!--
         <form name="subida-imagenes" type="POST" enctype="multipart/formdata" >
-            
         </form>-->
         <br>
-        <input type="file" name="imagen1" />
+        <label for="cargarFoto" class="cargarFotoCustomizado">
+            <i class="cargarImagen"></i> Cargar Imagen
+        </label>
+        <input id="cargarFoto" type="file"/>
+        <!--input type="file" name="imagen1" /-->
         <br>
-        <button id="ingresar_planta" onclick="alert('Se ingreso correctamente su planta');">
+        <br>
+        <button class="ingresar_planta" onclick="alert('Se ingreso correctamente su planta');">
         Ingresar planta
         </button>
-        
         <!--
         <a href="index.html"><input type="button" value="Ingresar planta"></a>
         -->
-
-    </form>
-    
+    </form>   
 </body>
 </html>
