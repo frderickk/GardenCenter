@@ -34,19 +34,9 @@ input[type="file"] {
     display: none;
 }
 
-.cargarFotoCustomizado {
+.cargarCustomizado {
     border: 1px solid #ccc;
     background-color: whitesmoke;
-    display: inline-block;
-    padding: 6px 12px;
-    cursor: pointer;
-}
-
-.ingresar_planta{
-    border: 1px solid #ccc;
-    background-color: whitesmoke;
-    font-size: 16px;
-    justify-content: center;
     display: inline-block;
     padding: 6px 12px;
     cursor: pointer;
@@ -58,4 +48,16 @@ input[type="file"] {
 
 #navegacion{
     text-align: center;
+}
+
+input:hover { 
+    outline: none !important;
+    border-color: #719ECE;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+input:focus, textarea:focus { 
+    outline: none !important;
+    border-color: #ce7171;
+    box-shadow: 0 0 10px #ce7171;
 }
