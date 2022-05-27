@@ -25,39 +25,39 @@
     <hr>
     <br>
     <h3 id="h3Datos">Datos de planta</h3>
-    <form id="formBox" action="#">
+    <form id="formBox" action="#" method="post">
         <label for="campo_nombre">Nombre</label>
         <br>
         <input type="text" name="nombre" id="campo_nombre">      
         <br>
         <label for="campo_familia">Familia</label>
         <br>
-        <input type="text" name="Familia" id="campo_familia"></input>
+        <input type="text" name="familia" id="campo_familia"></input>
         <br>
         <label for="campo_fila">Fila</label>
         <br>
-        <input type="number" name="Fila" id="campo_fila"></input>
+        <input type="number" name="fila" id="campo_fila"></input>
         <br>
         <label for="campo_columna">Columna</label>
         <br>
-        <input type="number" name="Columna" id="campo_columna"></input>
+        <input type="number" name="columna" id="campo_columna"></input>
         <br>
         <label for="campo_columna">Edad</label>
         <br>
-        <input type="number" name="Edad" id="campo_Edad"></input>
+        <input type="number" name="edad" id="campo_Edad"></input>
         <br>
          <!--
         <form name="subida-imagenes" type="POST" enctype="multipart/formdata" >
         </form>-->
         <br>
-        <label for="cargarFoto" class="cargarCustomizado">
+        <label for="cargarFoto" name="imagen" class="cargarCustomizado">
             <i class="cargarFoto"></i> Cargar Imagen
         </label>
         <input id="cargarFoto" type="file"/>
         <!--input type="file" name="imagen1" /-->
         <br>
         <br>
-        <label for="cargarPlanta" class="cargarCustomizado" onclick="alert('Se ingreso correctamente su planta')">
+        <label id="ingresar_planta" for="cargarPlanta" class="cargarCustomizado" name="cargar" onclick="alert('Se ingreso correctamente su planta')">
             <i class="cargarPlanta"></i> Cargar Planta
         </label>
         <br>

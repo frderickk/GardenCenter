@@ -1,0 +1,12 @@
+
+{
+    "datosPlantas":[
+     { 
+      "nombre":"rosa negra",
+      "familia":"rosa",
+      "fila": 1,
+      "columna": 1,
+      "edad": 1
+    }
+    ]
+}
