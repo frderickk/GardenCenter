@@ -30,7 +30,11 @@ function mostrarFecha(response , elementoId){
     Object.keys(response).forEach(key => {   
         //console.log(key, response[key].date);
         let item = document.createElement("li");
-        item.append(response[key].date);
+        item.append(response[key].date + "\n");
+        item.append(response[key].temp_max + "\n");
+        item.append(response[key].temp_min + "\n");
+        item.append(response[key].morning.description + "\n");
+        mostrarImagen(response[key].morning.weather_id, elementoId);
         lista.append(item);       
     });
 }
@@ -80,12 +84,17 @@ function mostrarDescTarde(response , elementoId){
 function mostrarImagen(numero , elementoId){
     let images = document.getElementById(elementoId);
     let newimg = document.createElement("img");
-    if(numero == 4){
+
+    if (numero == 4){
     newimg.setAttribute("src", "imagenes/lluvia.jpg");
+    newimg.setAttribute("width","50");
+    newimg.setAttribute("height","50");
     images.appendChild(newimg);
     }
     if (numero == 18){
         newimg.setAttribute("src", "imagenes/cielonublado.jpg");
+        newimg.setAttribute("width","50");
+        newimg.setAttribute("height","50");
         images.appendChild(newimg);
     }
 }
