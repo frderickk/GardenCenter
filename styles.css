@@ -61,3 +61,5 @@ input:focus, textarea:focus {
     border-color: #ce7171;
     box-shadow: 0 0 10px #ce7171;
 }
+
+#map { height: 180px; }
