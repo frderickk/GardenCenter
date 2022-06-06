@@ -1,7 +1,8 @@
 
 function main() {  
    // document.querySelector('#cargar').addEventListener('click', guardarDatosPlantas);
-    recargar();
+   //compararDatoFamilia(); 
+   //recargar();
 }
 
 function recargar() {
@@ -10,6 +11,31 @@ function recargar() {
         location.reload();
     })
 }
+
+var nuevaFamilia = {
+    nombre: "nombre"
+};
+
+
+function compararDatoFamilia() {
+    let plantaFamilia = document.getElementById("campo_familia").value;
+    if(nuevaFamilia.nombre != plantaFamilia){
+        console.log(plantaFamilia);
+        var opcion = confirm("La familia ingresada no existe, clickee en aceptar para cargar familia");
+        if (opcion == true) {
+            location.href = "ingresofamilia.html";
+        } else {
+            mensaje = "Has clickado Cancelar";
+        }
+        //window.alert("La familia ingresada no existe");
+    }
+    else{
+        window.alert("La planta se ingreso correctamente");
+        recargar();
+    }
+
+}
+
 
 /*var datosPlantas = []
 

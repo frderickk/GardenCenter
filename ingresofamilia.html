@@ -3,12 +3,12 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Ingreso de plantas</title>
+    <title>Ingreso de familia de planta</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
     <script src='funciones.js'></script>
 </head>
-<body onload="main()">
+<body >
     <header >
         <div >
             <div>
@@ -20,30 +20,42 @@
                     <a href="ingresofamilia.html">Ingresar familia</a>
                 </nav>
             </div>
-            <h1 id="h1Titulo">Introduzca los datos de la planta</h1>
+            <h1 id="h1Titulo">Introduzca los datos de la familia de planta</h1>
         </div> 
     </header>
     <hr>
     <br>
-    <h3 id="h3Datos">Datos de planta</h3>
+    <h3 id="h3Datos">Datos de familia</h3>
     <form id="formBox" action="#" method="post">
-        <label for="campo_nombre">Nombre</label>
+        <label for="campo_nombre">Nombre Comun</label>
         <br>
         <input type="text" name="nombre" id="campo_nombre">      
         <br>
-        <label for="campo_familia">Familia</label>
+        <label for="campo_familia">Nombre cientifico</label>
         <br>
-        <input type="text" name="familia" id="campo_familia"></input>
+        <input type="text" name="familia" id="campo_familia1"></input>
         <br>
-        <label for="campo_fila">Fila</label>
+        <label for="campo_fila">Color</label>
         <br>
-        <input type="number" name="fila" id="campo_fila"></input>
+        <input type="text" name="fila" id="campo_fila"></input>
         <br>
-        <label for="campo_columna">Columna</label>
+        <label for="campo_columna">Fruto</label>
         <br>
-        <input type="number" name="columna" id="campo_columna"></input>
+        <input type="text" name="columna" id="campo_columna"></input>
         <br>
-        <label for="campo_columna">Edad</label>
+        <label for="campo_columna">Clase</label>
+        <br>
+        <input type="text" name="edad" id="campo_Edad"></input>
+        <br>
+        <label for="campo_columna">Tipo de suelo</label>
+        <br>
+        <input type="text" name="edad" id="campo_Edad"></input>
+        <br>
+        <label for="campo_columna">Ciclo de riego</label>
+        <br>
+        <input type="text" name="edad" id="campo_Edad"></input>
+        <br>
+        <label for="campo_columna">Temperatura ambiente en grados centigrados</label>
         <br>
         <input type="number" name="edad" id="campo_Edad"></input>
         <br>
@@ -58,8 +70,8 @@
         <!--input type="file" name="imagen1" /-->
         <br>
         <br>
-        <label id="ingresar_planta" for="cargarPlanta" class="cargarCustomizado" name="cargar" onclick="compararDatoFamilia()">
-            <i class="cargarPlanta"></i> Cargar Planta
+        <label id="ingresar_planta" for="cargarPlanta" class="cargarCustomizado" name="cargar" onclick="alert('Se ingreso correctamente su planta')">
+            <i class="cargarPlanta"></i> Cargar familia
         </label>
         <br>
         <!--button class="ingresar_planta" onclick="alert('Se ingreso correctamente su planta');">
