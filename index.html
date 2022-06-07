@@ -5,7 +5,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Mi Vivero</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
     <script src='main.js'></script>
     
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
@@ -19,22 +19,35 @@
     <header >
         <div >
             <div>
-                <nav id="navegacion" class="navegacion">
-                    <a href="index.html">Home</a>
-                    <a href="infoclima.html">Clima</a>
-                    <a href="catalogoplantas.html">Catalogo</a>
-                    <a href="ingresoplantas.html">Ingresar plantas</a>
-                    <a href="ingresofamilia.html">Ingresar familia</a>
-                </nav>
+                <ul class="barraNav">
+                    <li><a class="principal" href="index.html">Home</a></li>
+                    <li><a href="infoclima.html">Clima</a></li>
+                    <li><a href="catalogoplantas.html">Catalogo</a></li>
+                    <li><a href="ingresoplantas.html">Ingreso Plantas</a></li>
+                    <li><a href="ingresofamilia.html">Ingreso Familias</a></li>
+                </ul>
             </div>
-            <h1>Bienvenido a Mi Vivero</h1>
+            <h1>Viveros Vivian</h1>
+            <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean feugiat, justo et accumsan porta, tortor arcu tempus arcu, et auctor mi elit ut enim. Maecenas a vestibulum tortor, ut faucibus turpis. Maecenas pretium et turpis in porttitor. Praesent quis volutpat nunc. Maecenas at sollicitudin libero. Nullam fringilla elit at eros gravida finibus. Aenean sed ante eleifend lectus volutpat fermentum quis a erat. Suspendisse euismod facilisis quam, non ornare nunc rutrum ac. Cras nec nulla tincidunt, hendrerit mi nec, auctor ligula. Donec eu dui ultrices, venenatis orci sit amet, varius tortor. In bibendum gravida iaculis. Morbi tempor molestie sapien. Fusce nec nibh eu ex vehicula sagittis eu eu nulla. Ut volutpat velit in ipsum consectetur, quis blandit diam molestie. Vivamus vitae commodo magna. Phasellus molestie, sem in venenatis condimentum, tortor justo facilisis lorem, sit amet dictum justo purus ac turpis.
+                Sed mollis, lorem at mattis tempus, lectus magna dignissim magna, id pulvinar nisi odio a ligula. Aenean non malesuada odio. Curabitur ac tellus lobortis, iaculis diam in, vulputate nibh. Sed lacinia luctus velit, cursus lobortis mauris varius vitae. Aliquam eu lorem enim. Fusce semper malesuada bibendum. Curabitur facilisis leo risus, non dapibus metus ornare ac. Aliquam at tortor aliquam, hendrerit elit eu, vulputate risus. Suspendisse turpis lectus, aliquam quis libero id, pharetra elementum ex.
+                Integer tempor feugiat neque, varius iaculis sem varius eget. In eget molestie mauris. Vivamus efficitur, est nec vulputate rhoncus, lacus risus vulputate erat, non sodales nisl dui ut velit. Vivamus ante velit, varius quis gravida at, tempus quis nunc. Suspendisse arcu lectus, placerat nec tincidunt eget, porttitor non orci. Phasellus fringilla tortor nec odio viverra, quis fermentum neque egestas. Nulla facilisi. Ut non purus accumsan, lacinia nisi convallis, lobortis est."
+            </p>
         </div>
-        
     </header>
-    <main>
-      <div id="map" style="width: 600px; height: 400px;"></div>
-    </main>
-    
+    <h2>Tiendas</h2>
+    <div id="mapaTienda">
+        <div id="map"></div>
+        <div id="tiendas">
+            <ul class="listaTiendas">
+                <li><a href="#map" onclick="marker1.fire('click'), display(1)">Digitalis Purpurea</a></li>
+                <li><a href="#map" onclick="marker2.fire('click')">Dracunculus Vulgaris</a></li>
+                <li><a href="#map" onclick="marker3.fire('click')">Aconitum Napellus</a></li>
+                <li><a href="#map" onclick="marker4.fire('click')">Datura Ferox</a></li>
+                <li><a href="#map" onclick="marker5.fire('click')">Atropa Belladonna</a></li>
+            </ul>
+        </div>
+    </div>
     <script src="funcionesMapa.js"></script>
 </body>
 

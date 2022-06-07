@@ -1,21 +1,20 @@
 // Configurar ubicacion del mapa
-var map = L.map('map').setView([-34.5442, -58.7404], 13);
+var map = L.map('map').setView([-34.4935435,-58.7040647], 13);
 
 //Agregar una vista al mapa
 var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
-  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  maxZoom: 19
 }).addTo(map);
 
 //Agregar marcadores
-var marker1 = L.marker([-34.5500, -58.7000]).addTo(map); //En los corchetes van las coordenadas
-var marker2 = L.marker([-34.5400, -58.7100]).addTo(map); //En los corchetes van las coordenadas
-var marker3 = L.marker([-34.5300, -58.7200]).addTo(map); //En los corchetes van las coordenadas
-var marker4 = L.marker([-34.5200, -58.7100]).addTo(map); //En los corchetes van las coordenadas
-var marker5 = L.marker([-34.5100, -58.7404]).addTo(map); //En los corchetes van las coordenadas
+var marker1 = L.marker([-34.4935435,-58.7040647]).addTo(map); 
+var marker2 = L.marker([-34.4933306,-58.6768258]).addTo(map); 
+var marker3 = L.marker([-34.5119929,-58.7039885]).addTo(map); 
+var marker4 = L.marker([-34.489012, -58.730218]).addTo(map); 
+var marker5 = L.marker([-34.4840046,-58.6873152]).addTo(map); 
 
-marker1.bindPopup("<b>Tienda #1 </b><br>Dirección").openPopup();
-marker2.bindPopup("<b>Tienda #2 </b><br>Dirección").openPopup();
-marker3.bindPopup("<b>Tienda #3 </b><br>Dirección").openPopup();
-marker4.bindPopup("<b>Tienda #4 </b><br>Dirección").openPopup();
-marker5.bindPopup("<b>Tienda #5 </b><br>Dirección").openPopup();
+marker5.bindPopup("<b>Vivian's Atropa Belladonna</b><br>Morse 120, Pablo Nogues").closePopup();
+marker4.bindPopup("<b>Vivian's Datura Ferox</b><br>Batalla de Chacabuco, Grand Bourg").closePopup();
+marker3.bindPopup("<b>Vivian's Aconitum Napellus</b><br>Cesar Bacle 3010, Los Polvorines").closePopup();
+marker2.bindPopup("<b>Vivan's Dracunculus Vulgaris</b><br>Luis Espinosa 2651, Villa de Mayo").closePopup();
+marker1.bindPopup("<b>Vivan's Digitalis Purpurea</b><br>Av. del Sesquicentenario 2126, Los Polvorines").closePopup();

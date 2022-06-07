@@ -4,23 +4,28 @@ html {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 720px) {
     html {
-      font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+      font-size: calc(16px + 6 * ((100vw - 720px) / 680));
     }
 }
 
 @media screen and (min-width: 1000px) {
     html {
-      font-size: 22px;
+      font-size: 21px;
     }
 }
 
 body {
     margin: auto;
-    max-width: max(650px);
     padding: 2rem;
+    color: #222;
+    background: #fff;
 }
+
+a {
+    color: #0033cc;
+  }
 
 #formBox {
     text-align: center;
@@ -36,7 +41,8 @@ input[type="file"] {
 
 .cargarCustomizado {
     border: 1px solid #ccc;
-    background-color: whitesmoke;
+    background-color: rgba(77, 111, 80, 0.623);
+    color: #fff;
     display: inline-block;
     padding: 6px 12px;
     cursor: pointer;
@@ -62,4 +68,71 @@ input:focus, textarea:focus {
     box-shadow: 0 0 10px #ce7171;
 }
 
-#map { height: 180px; }
+#mapaTienda {
+    margin: auto;
+    display: flex;
+}
+
+#map {
+    height: 400px;
+    width: 600px;
+    float: left;
+    margin: auto;
+    top: 50%;
+    translate: transformY(-50%) translate;
+}
+
+#tiendas {
+    width: 200px;
+    float: right;
+    margin: auto;
+}
+
+.barraNav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(77, 111, 80, 0.623);
+}
+
+.listaTiendas { 
+    width: 150px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(77, 111, 80, 0.623);
+}
+  
+li {
+    float: left;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+
+li a:hover {
+    background-color: #111;
+}
+
+ol {
+    list-style-type: none;
+}
+
+.infoTiendas {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: rgba(77, 111, 80, 0.623);
+}
+
+.principal {
+    background-color: #096f4a;
+}
+
