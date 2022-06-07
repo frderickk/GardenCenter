@@ -136,3 +136,83 @@ ol {
     background-color: #096f4a;
 }
 
+.clima-otros-dias {
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    height: min-content;
+}
+
+#clima1 {
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+    height: max-content;
+}
+
+#clima2 {
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+    height: max-content;
+}
+
+#clima3 {
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+    height: max-content;
+}
+
+#clima4 {
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+    height: max-content;
+}
+
+#descripcion-clima-maniana1 {
+    hyphens: auto;
+    text-align: justify;
+}
+
+#descripcion-clima-maniana2 {
+    hyphens: auto;
+    text-align: justify;
+}
+
+#descripcion-clima-maniana3 {
+    hyphens: auto;
+    text-align: justify;
+}
+
+#descripcion-clima-maniana4 {
+    hyphens: auto;
+    text-align: justify;
+}
+
+#descripcion-clima-tarde1 {
+    hyphens: auto;
+    text-align: justify;
+}
+
+#descripcion-clima-tarde2 {
+    hyphens: auto;
+    text-align: justify;
+}
+
+#descripcion-clima-tarde3 {
+    hyphens: auto;
+    text-align: justify;
+}
+
+#descripcion-clima-tarde4 {
+    hyphens: auto;
+    text-align: justify;
+}
+
+.alertas {
+    position: absolute;
+}
+
