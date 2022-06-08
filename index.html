@@ -18,7 +18,7 @@
 <body>
     <header >
         <div >
-            <div>
+            <div id="barra">
                 <ul class="barraNav">
                     <li><a class="actual" href="index.html">Home</a></li>
                     <li><a href="infoclima.html">Clima</a></li>
@@ -38,9 +38,11 @@
     <h2>Tiendas</h2>
     <div id="mapaTienda">
         <div id="map"></div>
+    </div>
+    <div>
         <div id="tiendas">
             <ul class="listaTiendas">
-                <li><a href="#map" onclick="marker1.fire('click'), display(1)">Digitalis Purpurea</a></li>
+                <li><a href="#map" onclick="marker1.fire('click')">Digitalis Purpurea</a></li>
                 <li><a href="#map" onclick="marker2.fire('click')">Dracunculus Vulgaris</a></li>
                 <li><a href="#map" onclick="marker3.fire('click')">Aconitum Napellus</a></li>
                 <li><a href="#map" onclick="marker4.fire('click')">Datura Ferox</a></li>

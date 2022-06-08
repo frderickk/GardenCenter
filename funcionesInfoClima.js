@@ -17,7 +17,7 @@ function climaPronostico() {
     .then(response => {
         for(var i=1; i<Object.keys(response).length; i++){
         mostrarRespuestaImagen(response[i].morning.weather_id, "imagen-clima"+i);
-        mostrarRespuestaImagen(response[i].morning.weather_id, "imagen-clima-tarde"+i);
+        mostrarRespuestaImagen(response[i].afternoon.weather_id, "imagen-clima-tarde"+i);
         mostrarRespuesta(response[i].date, "fecha-clima" + i);
         mostrarRespuesta("Temperatura máxima: " + response[i].temp_max, "grados-clima" + i);
         mostrarRespuesta("Temperatura mínima: " + response[i].temp_min, "grados-clima" + i );
@@ -122,20 +122,26 @@ function cargarImagen(numero , elementoId){
     let images = document.getElementById(elementoId);
     let newimg = document.createElement("img");
 
-    if (numero == 4 || numero == 11){
-        newimg.setAttribute("src", "imagenes/lluvias.png");
+    if (numero == 11){
+        newimg.setAttribute("src", "imagenes/11.png");
+        newimg.setAttribute("width","50");
+        newimg.setAttribute("height","50");
+        images.appendChild(newimg);
+    }
+    if (numero == 4) {
+        newimg.setAttribute("src", "imagenes/4.png");
         newimg.setAttribute("width","50");
         newimg.setAttribute("height","50");
         images.appendChild(newimg);
     }
     if (numero == 18){
-        newimg.setAttribute("src", "imagenes/nublado.png");
+        newimg.setAttribute("src", "imagenes/18.png");
         newimg.setAttribute("width","50");
         newimg.setAttribute("height","50");
         images.appendChild(newimg);
     }
-    if (numero == 2 || numero == 1){
-        newimg.setAttribute("src", "imagenes/parcialmentenublado.png");
+    if (numero == 1){
+        newimg.setAttribute("src", "imagenes/1.png");
         newimg.setAttribute("width","50");
         newimg.setAttribute("height","50");
         images.appendChild(newimg);
