@@ -216,3 +216,9 @@ ol {
     position: absolute;
 }
 
+#catalogoMain {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
