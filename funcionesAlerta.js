@@ -3,10 +3,13 @@ var urlAlertas= "/alerts/byDay";
 var urlAlertaNumero0 = "/0";
 var urlAlertaNumero1 = "/1";
 var urlAlertaNumero2 = "/2";
-var urlAlertaNumero3 = "/2";
+var urlAlertaNumero3 = "/3";
 
 function main(){
-    Alertas();   
+    Alertas();
+    Alertas2();
+    Alertas3();
+    Alertas4();  
 }
 
 /*<div id="titulo-alerta0"></div>
