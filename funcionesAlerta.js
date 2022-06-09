@@ -35,7 +35,7 @@ function GenerarAlertas(urlAlertasVariable) {
     .then(response => response.json()) 
     .then(response => response['alerts'])
     .then(response => {
-        for(var i=0; i<Object.keys(response).length; i++){
+        for(var i=0; i<Object.keys(response).length; i++){   
         mostrarRespuesta(response[i].title,"titulo-alerta" + i);
         mostrarRespuesta(response[i].status, "estado-alerta" + i);
         mostrarRespuesta(response[i].date, "fecha-hora-alerta" + i);
@@ -46,8 +46,40 @@ function GenerarAlertas(urlAlertasVariable) {
         }
         
     }})
+
+    enviarFechas();
 }
 
+function enviarFechas() {
+    var i = 0;
+    fetch(url + urlAlertas + "/" + 0)
+    .then(response => response.json()) 
+    .then(response => response['alerts'])
+    .then(response => {
+        mostrarRespuesta(response[0].date, "alertas-dia" + 0);    
+    })
+
+    fetch(url +urlAlertas + "/" + 1 )
+    .then(response => response.json()) 
+    .then(response => response['alerts'])
+    .then(response => {
+        mostrarRespuesta(response[0].date, "alertas-dia" + 1); 
+    })
+
+    fetch(url +urlAlertas + "/" + 2 )
+    .then(response => response.json()) 
+    .then(response => response['alerts'])
+    .then(response => {
+        mostrarRespuesta(response[0].date, "alertas-dia" + 2); 
+    })
+
+    fetch(url +urlAlertas + "/" + 3 )
+    .then(response => response.json()) 
+    .then(response => response['alerts'])
+    .then(response => {
+        mostrarRespuesta(response[0].date, "alertas-dia" + 3); 
+    })
+}
 
 function mostrarRespuesta(response , elementoId){
     let lista = document.getElementById(elementoId);
@@ -58,7 +90,6 @@ function mostrarRespuesta(response , elementoId){
     }
     item.append(" ");
     lista.append(item); 
-
      
 }
 

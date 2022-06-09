@@ -108,7 +108,6 @@ function mostrarRespuestaImagen(response , elementoId){
 
 function mostrarUbicacion(response , elementoId ){
     let lista = document.getElementById(elementoId);
-        //console.log(key, response[key].date);
         let item = document.createElement("p");
         item.append(response.name + ", ");
         lista.append(item);  

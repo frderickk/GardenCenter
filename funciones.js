@@ -26,6 +26,7 @@ function compararDatoFamilia() {
             location.href = "ingresofamilia.html";
         } else {
             mensaje = "Has clickado Cancelar";
+            recargar();
         }
         //window.alert("La familia ingresada no existe");
     }
