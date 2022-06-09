@@ -52,8 +52,14 @@ function GenerarAlertas(urlAlertasVariable) {
 function mostrarRespuesta(response , elementoId){
     let lista = document.getElementById(elementoId);
     let item = document.createElement("p");
-    item.append(response);
-    lista.append(item);  
+    if (response != null){
+        item.append(response);
+        lista.append(item); 
+    }
+    item.append(" ");
+    lista.append(item); 
+
+     
 }
 
 function enviarRespuesta(response , elementoId){
