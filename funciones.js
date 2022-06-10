@@ -1,8 +1,6 @@
 
 function main() {  
-   // document.querySelector('#cargar').addEventListener('click', guardarDatosPlantas);
-   //compararDatoFamilia(); 
-   //recargar();
+    ocultarDiv("resultado-cargar");
 }
 
 function recargar() {
@@ -32,9 +30,42 @@ function compararDatoFamilia() {
     }
     else{
         window.alert("La planta se ingreso correctamente");
-        recargar();
+        ocultarDiv("formBox");
+        mostrarDatoCargado("campo_nombre","nombre-planta");
+        mostrarDatoCargado("campo_familia","nombre-familia");
+        mostrarDatoCargado("campo_fila","nombre-fila");
+        mostrarDatoCargado("campo_columna","nombre-columna");
+        mostrarDatoCargado("campo_Edad","nombre-edad");
+        mostrarDiv("resultado-cargar");
     }
 
+}
+
+function mostrarDatoCargado(campoOrigen, campoDestino){
+    let plantaFamilia = document.getElementById(campoOrigen).value;
+    mostrarRespuesta(plantaFamilia, campoDestino);
+}
+
+function mostrarDiv(campoAMostrar)
+{
+    document.getElementById(campoAMostrar).style.display = '';
+}
+
+function ocultarDiv(campoAOcultar)
+{
+    document.getElementById(campoAOcultar).style.display = "none";
+}
+
+function mostrarRespuesta(response , elementoId){
+    let lista = document.getElementById(elementoId);
+    let item = document.createElement("p");
+    if (response != null){
+        item.append(response);
+        lista.append(item); 
+    }
+    item.append(" ");
+    lista.append(item); 
+     
 }
 
 
