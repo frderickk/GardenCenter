@@ -309,3 +309,7 @@ details > summary {
   from {opacity: .4}
   to {opacity: 1}
 }
+
+#resultado-cargar {
+    text-align: center;
+}
