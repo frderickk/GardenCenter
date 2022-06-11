@@ -8,7 +8,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
     <script src='funciones.js'></script>
 </head>
-<body >
+<body onload="main()">
     <header >
         <div >
             <div>
@@ -29,35 +29,35 @@
     <form id="formBox" action="#" method="post">
         <label for="campo_nombre">Nombre Comun</label>
         <br>
-        <input type="text" name="nombre" id="campo_nombre">      
+        <input type="text" name="nombre" id="campo_nombre" required>      
         <br>
         <label for="campo_familia">Nombre cientifico</label>
         <br>
-        <input type="text" name="familia" id="campo_familia1"></input>
+        <input type="text" name="familia" id="campo_familia1" required></input>
         <br>
-        <label for="campo_fila">Color</label>
+        <label for="campo_color">Color</label>
         <br>
-        <input type="text" name="fila" id="campo_fila"></input>
+        <input type="text" name="color" id="campo_color"></input>
         <br>
-        <label for="campo_columna">Fruto</label>
+        <label for="campo_fruto">Fruto</label>
         <br>
-        <input type="text" name="columna" id="campo_columna"></input>
+        <input type="text" name="fruto" id="campo_fruto"></input>
         <br>
-        <label for="campo_columna">Clase</label>
+        <label for="campo_clase">Clase</label>
         <br>
-        <input type="text" name="edad" id="campo_Edad"></input>
+        <input type="text" name="clase" id="campo_clase"></input>
         <br>
-        <label for="campo_columna">Tipo de suelo</label>
+        <label for="campo_suelo">Tipo de suelo</label>
         <br>
-        <input type="text" name="edad" id="campo_Edad"></input>
+        <input type="text" name="suelo" id="campo_suelo"></input>
         <br>
-        <label for="campo_columna">Ciclo de riego</label>
+        <label for="campo_riego">Ciclo de riego</label>
         <br>
-        <input type="text" name="edad" id="campo_Edad"></input>
+        <input type="text" name="riego" id="campo_riego" required></input>
         <br>
-        <label for="campo_columna">Temperatura ambiente en grados centigrados</label>
+        <label for="campo_temperatura">Temperatura ambiente (C°)</label>
         <br>
-        <input type="number" name="edad" id="campo_Edad"></input>
+        <input type="number" name="temperatura" id="campo_temperatura" required></input>
         <br>
          <!--
         <form name="subida-imagenes" type="POST" enctype="multipart/formdata" >
@@ -70,7 +70,7 @@
         <!--input type="file" name="imagen1" /-->
         <br>
         <br>
-        <label id="ingresar_planta" for="cargarPlanta" class="cargarCustomizado" name="cargar" onclick="alert('Se ingreso correctamente su planta')">
+        <label id="ingresar_planta" for="cargarPlanta" class="cargarCustomizado" name="cargar"  onclick="ocultarYMostrarEnFamilia()">
             <i class="cargarPlanta"></i> Cargar familia
         </label>
         <br>
@@ -81,5 +81,16 @@
         <a href="index.html"><input type="button" value="Ingresar planta"></a>
         -->
     </form>   
+
+    <div id="resultado-cargar" >
+        <p id="nombre-comun">Nombre comun: </p>
+        <p id="nombre-cientifico">Nombre cientifico: </p>
+        <p id="nombre-color">Color: </p>
+        <p id="nombre-fruto">Fruto: </p>
+        <p id="nombre-clase">Clase: </p>
+        <p id="nombre-suelo">Tipo de suelo: </p>
+        <p id="nombre-riego">Ciclo de riego: </p>
+        <p id="nombre-temperatura">Temperatura ambiente: </p>
+    </div> 
 </body>
 </html>

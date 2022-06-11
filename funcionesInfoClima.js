@@ -67,6 +67,13 @@ function enviarFechas() {
     .then(response => {
     agregarRespuesta(response[0].date, "alertas-dia" + 2); 
     })
+
+    fetch(url +urlAlertas + "/" + 3 )
+    .then(response => response.json()) 
+    .then(response => response['alerts'])
+    .then(response => {
+    agregarRespuesta(response[0].date, "alertas-dia" + 3); 
+    })
 }
 
 function agregarRespuesta(response , elementoId){
@@ -101,7 +108,6 @@ function mostrarRespuestaImagen(response , elementoId){
 
 function mostrarUbicacion(response , elementoId ){
     let lista = document.getElementById(elementoId);
-        //console.log(key, response[key].date);
         let item = document.createElement("p");
         item.append(response.name + ", ");
         lista.append(item);  
@@ -109,13 +115,6 @@ function mostrarUbicacion(response , elementoId ){
         lista.append(item);     
 }
 
-function mostrarTempActual(response , elementoId ){
-    let lista = document.getElementById(elementoId);
-        //console.log(key, response[key].date);
-        let item = document.createElement("p");
-        item.append("La temperatura actual es " + response + " °C");
-        lista.append(item);       
-}
 
 
 function cargarImagen(numero , elementoId){

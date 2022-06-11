@@ -1,8 +1,6 @@
 
 function main() {  
-   // document.querySelector('#cargar').addEventListener('click', guardarDatosPlantas);
-   //compararDatoFamilia(); 
-   //recargar();
+    ocultarDiv("resultado-cargar");
 }
 
 function recargar() {
@@ -26,16 +24,54 @@ function compararDatoFamilia() {
             location.href = "ingresofamilia.html";
         } else {
             mensaje = "Has clickado Cancelar";
+            recargar();
         }
-        //window.alert("La familia ingresada no existe");
     }
     else{
         window.alert("La planta se ingreso correctamente");
-        recargar();
+        ocultarDiv("formBox");
+        mostrarDatoCargado("campo_nombre","nombre-planta");
+        mostrarDatoCargado("campo_familia","nombre-familia");
+        mostrarDatoCargado("campo_fila","nombre-fila");
+        mostrarDatoCargado("campo_columna","nombre-columna");
+        mostrarDatoCargado("campo_Edad","nombre-edad");
+        mostrarDiv("resultado-cargar");
     }
-
 }
 
+function ocultarYMostrarEnFamilia(){
+    window.alert("Se ingreso correctamente su planta");
+    ocultarDiv("formBox");
+    mostrarDatoCargado("campo_nombre","nombre-comun");
+    mostrarDatoCargado("campo_familia1","nombre-cientifico");
+    mostrarDatoCargado("campo_color","nombre-color");
+    mostrarDatoCargado("campo_fruto","nombre-fruto");
+    mostrarDatoCargado("campo_clase","nombre-clase");
+    mostrarDatoCargado("campo_suelo","nombre-suelo");
+    mostrarDatoCargado("campo_riego","nombre-riego");
+    mostrarDatoCargado("campo_temperatura","nombre-temperatura");
+    mostrarDiv("resultado-cargar");
+}
+
+function mostrarDatoCargado(campoOrigen, campoDestino){
+    let plantaFamilia = document.getElementById(campoOrigen).value;
+    enviarRespuesta(plantaFamilia, campoDestino);
+}
+
+function mostrarDiv(campoAMostrar)
+{
+    document.getElementById(campoAMostrar).style.display = '';
+}
+
+function ocultarDiv(campoAOcultar)
+{
+    document.getElementById(campoAOcultar).style.display = "none";
+}
+
+function enviarRespuesta(response , elementoId){
+    var text = document.createTextNode(response);
+    document.getElementById(elementoId).append(text);
+}
 
 /*var datosPlantas = []
 
