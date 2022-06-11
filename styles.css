@@ -128,7 +128,7 @@ input:focus, textarea:focus {
   
 li {
     float: left;
-}
+} 
   
 li a {
     display: block;
@@ -250,7 +250,15 @@ ol {
   flex-wrap: wrap;
 }
 
-#resultado-cargar {
-    text-align: center;
+.containerFamilia {
+  background-color: #ccc;
+  margin: 10px;
+  width: 320px;
 }
 
+details {
+  width: 320px;
+}
+details > summary {
+  list-style: none;
+}

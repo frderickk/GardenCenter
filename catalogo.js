@@ -1,25 +1,51 @@
-
-
-var plantas = '[{"nombre":"rosa china","precio":"100","imagen":"./imagenes/rosa_china.jpg"},{"nombre":"alegrias","precio":"100","imagen":"./imagenes/alegrias.jpg"},{"nombre":"jazmin","precio":"100","imagen":"./imagenes/jazmin.jpg"}]';
-
-var plantasJSON = JSON.parse(plantas);
+var familiasPlantas = familias;
+var familiasJSON = JSON.parse(familiasPlantas);
 
 var main = document.getElementById("catalogoMain");
 
+familiasJSON.forEach(planta => {
 
+  var plantaContainer = document.createElement("details");
+  var plantaHeader = document.createElement("summary");
 
-plantasJSON.forEach(planta => {
-  var divPlanta = document.createElement("div");
-  
-  var nombrePlanta = document.createElement("p");
-  var imgPlanta = document.createElement("img");
-  imgPlanta.src = planta.imagen;
-  nombrePlanta.textContent = planta.nombre;
+  var nombreComun = document.createElement("h2");
+  var detalles = document.createElement("ul");
+  var nombreCientifico = document.createElement("li");
+  var color = document.createElement("li");
+  var fruto = document.createElement("li");
+  var clase = document.createElement("li");
+  var tipoSuelo = document.createElement("li");
+  var cicloRiego = document.createElement("li");
+  var TemperaturaAmbiente = document.createElement("li");
+  var img = document.createElement("img");
 
-  divPlanta.appendChild(imgPlanta);
-  divPlanta.appendChild(nombrePlanta);
+  nombreComun.textContent = planta.nombreComun;
+  nombreCientifico.textContent = "Nombre cientifico: " + planta.nombreCientifico;
+  color.textContent = "Color: " + planta.color;
+  fruto.textContent = "Fruto: " + planta.fruto;
+  clase.textContent = "Clase: " + planta.clase;
+  tipoSuelo.textContent = "Tipo de suelo: " + planta.tipoSuelo;
+  cicloRiego.textContent = "Ciclo de riego: " + planta.cicloRiego;
+  TemperaturaAmbiente.textContent = "Temperatura ambiente: " + planta.TemperaturaAmbiente;
+  img.src = planta.imagen;
 
-  main.appendChild(divPlanta);
+  detalles.appendChild(nombreCientifico);
+  detalles.appendChild(color);
+  detalles.appendChild(fruto);
+  detalles.appendChild(clase);
+  detalles.appendChild(tipoSuelo);
+  detalles.appendChild(cicloRiego);
+  detalles.appendChild(TemperaturaAmbiente);
+
+  plantaHeader.appendChild(nombreComun);
+  plantaHeader.appendChild(img);
+
+  plantaContainer.appendChild(plantaHeader);
+  plantaContainer.appendChild(detalles);
+
+  //divPlanta.className="containerFamilia";
+
+  main.appendChild(plantaContainer);
 });
 
 
