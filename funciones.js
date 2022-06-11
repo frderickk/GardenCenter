@@ -40,7 +40,7 @@ function compararDatoFamilia() {
 }
 
 function ocultarYMostrarEnFamilia(){
-    window.alert("Se ingreso correctamente su planta");
+    window.alert("La familia se ingreso correctamente");
     ocultarDiv("formBox");
     mostrarDatoCargado("campo_nombre","nombre-comun");
     mostrarDatoCargado("campo_familia1","nombre-cientifico");

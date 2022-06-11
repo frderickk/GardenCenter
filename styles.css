@@ -99,7 +99,9 @@ input:focus, textarea:focus {
     padding: 0;
     overflow: hidden;
     background-color: rgba(77, 111, 80);
-    text-align: justify;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .listaTiendas { 
@@ -108,7 +110,20 @@ input:focus, textarea:focus {
     padding: 0;
     overflow: hidden;
     background-color: rgba(77, 111, 80);
-    text-align: justify;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.alertas {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(77, 111, 80);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
   
 li {
@@ -228,13 +243,14 @@ ol {
     text-align: justify;
 }
 
-.alertas {
-    position: absolute;
-}
 
 #catalogoMain {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+#resultado-cargar {
+    text-align: center;
 }
 
