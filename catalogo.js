@@ -6,9 +6,6 @@ var familiasJSON = JSON.parse(familiasPlantas);
 var main = document.getElementById("catalogoMain");
 
 
-
-
-
 familiasJSON.forEach(planta => {
 
   var plantaContainer = document.createElement("details");
@@ -59,30 +56,39 @@ familiasJSON.forEach(planta => {
   var liNombre = document.createElement('li');
   liNombre.textContent = planta.nombreComun;
   nombres.appendChild(liNombre);
+  liNombre.onclick = filtrar();
 
   var nombresCientificos = document.getElementById("fitroNombreCientifico");
   var liNombreCientifico = document.createElement('li');
   liNombreCientifico.textContent = planta.nombreCientifico;
   nombresCientificos.appendChild(liNombreCientifico);
+  liNombreCientifico.onclick = filtrar();
 
   var colores = document.getElementById("fitroColor");
   var liColor = document.createElement('li');
   colores.appendChild(liColor);
   liColor.textContent = planta.color;
+  liColor.onclick = filtrar();
 
   var frutos = document.getElementById("fitroFruto");
   var liFruto = document.createElement('li');
   frutos.appendChild(liFruto);
   liFruto.textContent = planta.fruto;
+  liFruto.onclick = filtrar();
 
   var clases = document.getElementById("fitroClase");
   var liClase = document.createElement('li');
   clases.appendChild(liClase);
   liClase.textContent = planta.clase;
+  liClase.onclick = filtrar();
   
 
 });
 
+function filtrar(){
+  console.log("filtrando");
+  // TO-DO
+}
 
 
 
