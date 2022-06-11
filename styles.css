@@ -125,11 +125,7 @@ input:focus, textarea:focus {
     justify-content: space-around;
     flex-wrap: wrap;
 }
-  
-li {
-    float: left;
-} 
-  
+   
 li a {
     display: block;
     color: white;

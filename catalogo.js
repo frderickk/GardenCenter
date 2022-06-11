@@ -1,7 +1,13 @@
 var familiasPlantas = familias;
+
+
 var familiasJSON = JSON.parse(familiasPlantas);
 
 var main = document.getElementById("catalogoMain");
+
+
+
+
 
 familiasJSON.forEach(planta => {
 
@@ -46,7 +52,37 @@ familiasJSON.forEach(planta => {
   //divPlanta.className="containerFamilia";
 
   main.appendChild(plantaContainer);
+
+
+
+  var nombres = document.getElementById("fitroNombreComun");
+  var liNombre = document.createElement('li');
+  liNombre.textContent = planta.nombreComun;
+  nombres.appendChild(liNombre);
+
+  var nombresCientificos = document.getElementById("fitroNombreCientifico");
+  var liNombreCientifico = document.createElement('li');
+  liNombreCientifico.textContent = planta.nombreCientifico;
+  nombresCientificos.appendChild(liNombreCientifico);
+
+  var colores = document.getElementById("fitroColor");
+  var liColor = document.createElement('li');
+  colores.appendChild(liColor);
+  liColor.textContent = planta.color;
+
+  var frutos = document.getElementById("fitroFruto");
+  var liFruto = document.createElement('li');
+  frutos.appendChild(liFruto);
+  liFruto.textContent = planta.fruto;
+
+  var clases = document.getElementById("fitroClase");
+  var liClase = document.createElement('li');
+  clases.appendChild(liClase);
+  liClase.textContent = planta.clase;
+  
+
 });
+
 
 
 
