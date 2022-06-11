@@ -297,7 +297,7 @@ details > summary {
 }
 
 .carruselImagenes {
-  display: none;
+  display: flex;
 }
 
 .fade {
