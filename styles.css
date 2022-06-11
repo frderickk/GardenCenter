@@ -175,6 +175,21 @@ ol {
     height: min-content;
 }
 
+.pronostico-alerta {
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    height: min-content;
+}
+
+#alerta {
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+    height: max-content;
+}
+
 #clima1 {
     text-align: center;
     padding: 20px;
@@ -243,6 +258,20 @@ ol {
     text-align: justify;
 }
 
+#descripcion-alerta1{
+    hyphens: auto;
+    text-align: justify;
+}
+
+#descripcion-alerta2{
+    hyphens: auto;
+    text-align: justify;
+}
+
+#descripcion-alerta0{
+    hyphens: auto;
+    text-align: justify;
+}
 
 #catalogoMain {
   display: flex;

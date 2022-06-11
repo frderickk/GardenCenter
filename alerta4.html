@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'> 
     <script src="jquery-3.6.0.min.js"></script>
     <script src="funcionesAlerta.js"></script>
     <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
@@ -10,39 +13,51 @@
     <header >
         <div >
             <div>
-                <nav id="navegacion" class="navegacion">
-                    <a href="index.html">Home</a>
-                    <a href="infoclima.html">Clima</a>
-                    <a href="catalogoplantas.html">Catalogo</a>
-                    <a href="ingresoplantas.html">Ingresar plantas</a>
-                </nav>
+                <ul class="barraNav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="actual"href="infoclima.html">Clima</a></li>
+                    <li><a href="catalogoplantas.html">Catalogo</a></li>
+                    <li><a href="ingresoplantas.html">Ingreso Plantas</a></li>
+                    <li><a href="ingresofamilia.html">Ingreso Familias</a></li>
+                </ul>
             </div>
             <h1 id="h1Titulo">Alertas de clima</h1>
         </div> 
     </header>
-
-    <div>
-        <div id="titulo-alerta0"></div>
-        <div id="estado-alerta0"></div>
-        <div id="fecha-hora-alerta0"></div>
-        <div id="descripcion-alerta0"></div>
-        <div id="zonas-afectadas-alerta0"></div>
-    </div>
-
-    <div>
-        <div id="titulo-alerta1"></div>
-        <div id="estado-alerta1"></div>
-        <div id="fecha-hora-alerta1"></div>
-        <div id="descripcion-alerta1"></div>
-        <div id="zonas-afectadas-alerta1"></div>
-    </div>
-
-    <div>
-        <div id="titulo-alerta2"></div>
-        <div id="estado-alerta2"></div>
-        <div id="fecha-hora-alerta2"></div>
-        <div id="descripcion-alerta2"></div>
-        <div id="zonas-afectadas-alerta2"></div>
+    <div class="pronostico-alerta">
+        <div id="alerta">
+            <hr>
+            <h6>Tipo de alerta</h6>
+            <div id="titulo-alerta2"></div>
+            <div id="estado-alerta2"></div>
+            <h6>Fecha y hora</h6>
+            <div id="fecha-hora-alerta2"></div>
+            <div lang="en"id="descripcion-alerta2"></div>
+            <h6>Zonas afectadas</h6>
+            <div id="zonas-afectadas-alerta2"></div>
+        </div>
+        <div id="alerta">
+            <hr>
+            <h6>Tipo de alerta</h6>
+            <div id="titulo-alerta1"></div>
+            <div id="estado-alerta1"></div>
+            <h6>Fecha y hora</h6>
+            <div id="fecha-hora-alerta1"></div>
+            <div lang="en"id="descripcion-alerta1"></div>
+            <h6>Zonas afectadas</h6>
+            <div id="zonas-afectadas-alerta1"></div>
+        </div>
+        <div id="alerta">
+            <hr>
+            <h6>Tipo de alerta</h6>
+            <div id="titulo-alerta0"></div>
+            <div id="estado-alerta0"></div>
+            <h6>Fecha y hora</h6>
+            <div id="fecha-hora-alerta0"></div>
+            <div lang="en"id="descripcion-alerta0"></div>
+            <h6>Zonas afectadas</h6>
+            <div id="zonas-afectadas-alerta0"></div>
+        </div>    
     </div>
     <br>
     <br>
