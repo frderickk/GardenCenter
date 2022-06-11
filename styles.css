@@ -111,9 +111,10 @@ input:focus, textarea:focus {
     text-align: justify;
 }
   
-li {
+/* li {
     float: left;
-}
+} */
+/* float: left afecta al catalogo, CAMBIAR li POR ID O CLASS */
   
 li a {
     display: block;
@@ -238,3 +239,15 @@ ol {
   flex-wrap: wrap;
 }
 
+.containerFamilia {
+  background-color: #ccc;
+  margin: 10px;
+  width: 320px;
+}
+
+details {
+  width: 320px;
+}
+details > summary {
+  list-style: none;
+}
