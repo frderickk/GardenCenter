@@ -1,3 +1,5 @@
+var familiasPlantas = familias;
+var familiasJSON = JSON.parse(familiasPlantas);
 
 function main() {  
     ocultarDiv("resultado-cargar");
@@ -10,21 +12,16 @@ function recargar() {
     })
 }
 
-var nuevaFamilia = {
-    nombre: "nombre"
-};
-
 
 function compararDatoFamilia() {
     let plantaFamilia = document.getElementById("campo_familia").value;
-    if(nuevaFamilia.nombre != plantaFamilia){
-        console.log(plantaFamilia);
+    if(!compararDatos(plantaFamilia) ){
+        //console.log(plantaFamilia);
         var opcion = confirm("La familia ingresada no existe, clickee en aceptar para cargar familia");
         if (opcion == true) {
             location.href = "ingresofamilia.html";
         } else {
             mensaje = "Has clickado Cancelar";
-            recargar();
         }
     }
     else{
@@ -37,6 +34,15 @@ function compararDatoFamilia() {
         mostrarDatoCargado("campo_Edad","nombre-edad");
         mostrarDiv("resultado-cargar");
     }
+}
+function compararDatos(datoAComparar)
+{
+    let sonIguales = false;
+    familiasJSON.forEach(planta => {
+        if(planta.nombreComun.toLowerCase() == datoAComparar.toLowerCase())
+        sonIguales = true;   
+    });
+    return sonIguales;
 }
 
 function ocultarYMostrarEnFamilia(){
