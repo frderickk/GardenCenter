@@ -8,7 +8,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
     <script src='funciones.js'></script>
 </head>
-<body >
+<body onload="main()">
     <header >
         <div >
             <div>
@@ -29,11 +29,11 @@
     <form id="formBox" action="#" method="post">
         <label for="campo_nombre">Nombre Comun</label>
         <br>
-        <input type="text" name="nombre" id="campo_nombre">      
+        <input type="text" name="nombre" id="campo_nombre" required>      
         <br>
         <label for="campo_familia">Nombre cientifico</label>
         <br>
-        <input type="text" name="familia" id="campo_familia1"></input>
+        <input type="text" name="familia" id="campo_familia1" required></input>
         <br>
         <label for="campo_color">Color</label>
         <br>
@@ -53,11 +53,11 @@
         <br>
         <label for="campo_riego">Ciclo de riego</label>
         <br>
-        <input type="text" name="riego" id="campo_riego"></input>
+        <input type="text" name="riego" id="campo_riego" required></input>
         <br>
-        <label for="campo_temperatura">Temperatura ambiente en grados centigrados</label>
+        <label for="campo_temperatura">Temperatura ambiente (C°)</label>
         <br>
-        <input type="number" name="temperatura" id="campo_temperatura"></input>
+        <input type="number" name="temperatura" id="campo_temperatura" required></input>
         <br>
          <!--
         <form name="subida-imagenes" type="POST" enctype="multipart/formdata" >
@@ -70,7 +70,7 @@
         <!--input type="file" name="imagen1" /-->
         <br>
         <br>
-        <label id="ingresar_planta" for="cargarPlanta" class="cargarCustomizado" name="cargar" onclick="alert('Se ingreso correctamente su planta')">
+        <label id="ingresar_planta" for="cargarPlanta" class="cargarCustomizado" name="cargar"  onclick="ocultarYMostrarEnFamilia()">
             <i class="cargarPlanta"></i> Cargar familia
         </label>
         <br>
@@ -81,5 +81,16 @@
         <a href="index.html"><input type="button" value="Ingresar planta"></a>
         -->
     </form>   
+
+    <div id="resultado-cargar" >
+        <p id="nombre-comun">Nombre comun: </p>
+        <p id="nombre-cientifico">Nombre cientifico: </p>
+        <p id="nombre-color">Color: </p>
+        <p id="nombre-fruto">Fruto: </p>
+        <p id="nombre-clase">Clase: </p>
+        <p id="nombre-suelo">Tipo de suelo: </p>
+        <p id="nombre-riego">Ciclo de riego: </p>
+        <p id="nombre-temperatura">Temperatura ambiente: </p>
+    </div> 
 </body>
 </html>

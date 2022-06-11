@@ -26,7 +26,6 @@ function compararDatoFamilia() {
             mensaje = "Has clickado Cancelar";
             recargar();
         }
-        //window.alert("La familia ingresada no existe");
     }
     else{
         window.alert("La planta se ingreso correctamente");
@@ -38,12 +37,25 @@ function compararDatoFamilia() {
         mostrarDatoCargado("campo_Edad","nombre-edad");
         mostrarDiv("resultado-cargar");
     }
+}
 
+function ocultarYMostrarEnFamilia(){
+    window.alert("Se ingreso correctamente su planta");
+    ocultarDiv("formBox");
+    mostrarDatoCargado("campo_nombre","nombre-comun");
+    mostrarDatoCargado("campo_familia1","nombre-cientifico");
+    mostrarDatoCargado("campo_color","nombre-color");
+    mostrarDatoCargado("campo_fruto","nombre-fruto");
+    mostrarDatoCargado("campo_clase","nombre-clase");
+    mostrarDatoCargado("campo_suelo","nombre-suelo");
+    mostrarDatoCargado("campo_riego","nombre-riego");
+    mostrarDatoCargado("campo_temperatura","nombre-temperatura");
+    mostrarDiv("resultado-cargar");
 }
 
 function mostrarDatoCargado(campoOrigen, campoDestino){
     let plantaFamilia = document.getElementById(campoOrigen).value;
-    mostrarRespuesta(plantaFamilia, campoDestino);
+    enviarRespuesta(plantaFamilia, campoDestino);
 }
 
 function mostrarDiv(campoAMostrar)
@@ -56,18 +68,10 @@ function ocultarDiv(campoAOcultar)
     document.getElementById(campoAOcultar).style.display = "none";
 }
 
-function mostrarRespuesta(response , elementoId){
-    let lista = document.getElementById(elementoId);
-    let item = document.createElement("p");
-    if (response != null){
-        item.append(response);
-        lista.append(item); 
-    }
-    item.append(" ");
-    lista.append(item); 
-     
+function enviarRespuesta(response , elementoId){
+    var text = document.createTextNode(response);
+    document.getElementById(elementoId).append(text);
 }
-
 
 /*var datosPlantas = []
 
